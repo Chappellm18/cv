@@ -1,1 +1,29 @@
-<p>projects works!</p>
+<div style="display: flex; flex-direction: column; justify-content: center;">
+    <div style="display: flex; justify-content: center; flex-direction: row;">
+        <div style="display: flex; align-items: center;">
+            Projects I have worked on
+        </div>
+        <div style="width:50%; ">
+            <img src="../../../assets/projects.png" class="img-fluid rounded-start" style="scale:.5;"/>
+        </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; flex-direction: row; flex-wrap: wrap;">
+        <div *ngFor="let p of projects" style="margin: 10px;">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                    <img src="{{p.imageUrl}}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{p.name}}</h5>
+                        <p class="card-text">{{p.description}}</p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+    
+</div>

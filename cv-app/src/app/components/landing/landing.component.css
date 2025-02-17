@@ -14,3 +14,8 @@
 .social-links a.github:hover {
     color: #000; /* GitHub black */
 }
+
+html {
+    overflow: hidden;
+
+}
