@@ -1,0 +1,12 @@
+.info-container {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.title {
+
+}

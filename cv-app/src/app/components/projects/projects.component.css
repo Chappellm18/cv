@@ -1,0 +1,37 @@
+.projects-container {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: start; 
+    color: whitesmoke;
+}    
+
+.project {
+    margin:5px;
+    padding: 5px;
+}
+.project:hover {
+    background-color: lightblue;
+    border-radius: 5px;
+}
+
+.title {
+    display: flex;
+    align-items: center; 
+    justify-content: start;
+}
+.title-link {
+    text-decoration: underline;
+    color:whitesmoke;
+}
+
+.tech-stack {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.tech-stack .item {
+    background-color: rgb(86, 152, 215);
+    padding: 5px;
+    border-radius: 15px;
+    margin:2px;
+}

@@ -1,29 +1,48 @@
-<div style="display: flex; flex-direction: column; justify-content: center;">
-    <div style="display: flex; justify-content: center; flex-direction: row;">
-        <div style="display: flex; align-items: center;">
-            Projects I have worked on
-        </div>
-        <div style="width:50%; ">
-            <img src="../../../assets/projects.png" class="img-fluid rounded-start" style="scale:.5;"/>
-        </div>
+
+
+<div class="projects-container">
+
+    <div class="title">
+        <h2>Projects</h2>
     </div>
 
-    <div style="display: flex; justify-content: center; flex-direction: row; flex-wrap: wrap;">
-        <div *ngFor="let p of projects" style="margin: 10px;">
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                    <img src="{{p.imageUrl}}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">{{p.name}}</h5>
-                        <p class="card-text">{{p.description}}</p>
-                    </div>
+    <div>
+        <div *ngFor="let project of projects">
+            <div class="project">
+                <div *ngIf="project.githubLink == ''; else link">
+                    <h4>{{project.title}}</h4>
+                </div>
+                <ng-template #link>
+                    <h4>
+                        <a 
+                        class="title title-link"
+                        href="">
+                            {{project.title}} 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 17L17 7"></path>
+                            <path d="M7 7h10v10"></path>
+                          </svg>
+                        </a>
+                    </h4>
+                </ng-template>
+
+                <p>{{project.description}}</p>
+    
+                <div class="tech-stack">
+                    <div *ngFor="let item of project.technologies" >
+                        <div class="item">
+                            {{item}}
+                        </div>
                     </div>
                 </div>
-                </div>
+            </div>
+            
+            
         </div>
     </div>
-    
 </div>
+
+
+
+
+

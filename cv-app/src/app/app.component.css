@@ -1,16 +1,29 @@
-.social-links {
+.app-container {
     display: flex;
-    gap: 15px;
+    flex-direction: row;
+    background-color: rgb(64, 78, 94);
+    height: 100vh; 
 }
-.social-links a {
-    font-size: 24px;
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease;
+
+.app-container-col {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start; 
+    flex-direction: column;
+    align-items: center;
 }
-.social-links a:hover {
-    color: #0077b5; /* LinkedIn blue */
+
+.app-container-col.landing {
+    position: sticky;
+    top: 0;
+    height: 100vh; 
+    overflow: hidden;
 }
-.social-links a.github:hover {
-    color: #000; /* GitHub black */
+
+.app-container-col.info {
+    overflow-y: auto; 
+    height: 100vh; 
+    padding-top: 0; 
+    padding-right:10%;
 }
+
